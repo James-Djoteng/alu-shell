@@ -2,6 +2,4 @@
 # printing best school x10
 for ((c=1; c<=10; c++)) do
 	echo "Best School"
-donefor ((c=1; c<=10; c++)) do
-	echo "Best School"
 done
