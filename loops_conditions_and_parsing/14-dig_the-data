@@ -1,1 +1,3 @@
 #!/usr/bin/env bash
+#Data look
+awk {print ,} apache-access.log | sort -V | uniq -c | sort -n | perl -e print reverse

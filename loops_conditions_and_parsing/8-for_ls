@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-content=0
-list=$(ls)
-for content in $list
+#Display all the file in . without -
+for file in *
 do
-    echo "$content" | cut -d "-" -f2
+	file=${file#*-}
+	echo "$file"
 done

@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
-CONTER=0
-while [ $CONTER -lt 10 ];
+#First try
+counter=1
+while ((counter<=10))
 do
-    if [ $CONTER -eq 3 ]
-    then
-echo "bad luck"
-    elif [ $CONTER -eq 7 ]
-    then
-echo "good luck"
-    else
-echo "Holberton School"
-    fi
-    let CONTER=CONTER+1
+	if ((counter==4)); then
+		echo "bad luck"
+	elif ((counter==8)); then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+	((counter++))
 done

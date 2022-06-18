@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
-cont=0
-while [ $cont -lt 10 ];
+#Best school 10x 9th hi
+counter=1
+while ((counter<=10))
 do
-    if [ $cont -eq 9 ]
-    then
-echo "Hi"
-    fi
-    echo "Best School"
-    let cont=cont+1
+	echo "Best School"
+	if ((counter==9)); then
+		echo "Hi"
+	fi
+	((counter++))
+
 done

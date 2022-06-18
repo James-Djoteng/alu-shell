@@ -1,18 +1,14 @@
 #!/usr/bin/env bash
-conter=1
-while [ $conter -le 100 ];
+#Multiplia
+for ((number=1; number<=100; number++))
 do
-if [ $((conter%3)) == 0 -a $((conter%5)) == 0 ]
-then
-    echo "FizzBuzz"
-elif [ $((conter%3)) == 0 ]
-then
-    echo "Fizz"
-elif [ $((conter%5)) == 0 ]
-then
-    echo "Buzz"
-else
-    echo $conter
-fi
-    let conter=conter+1
+	if [ $(( number%3 )) == 0 ] && [ $((number%5)) == 0 ]; then
+		echo "FizzBuzz"
+	elif ((number%3 == 0)); then
+		echo "Fizz"
+	elif ((number%5 == 0)); then
+		echo "Buzz"
+      	else
+		echo "$number"
+	fi
 done

@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
-hour=0
-while [ $hour -le 12 ];
+#time loop form 12h01 to 12h59
+heure=0
+min=1
+while ((heure<=12))
 do
-    echo "Hour: $hour"
-    minutes=1
-    while [ $minutes -le 59 ];
-    do
-echo  $minutes
-let minutes=minutes+1
-    done
-    let hour=hour+1
+	echo "Hour: $heure"
+	while ((min<=59))
+	do
+		echo $min
+		((min++))
+	done
+	min=1
+	((heure++))
 done
